@@ -61,11 +61,40 @@
 </div>
 <div class="singleItem">
     <div class="container">
-        <span class="backButton">< Назад</span>
-        <div class="product">
-            <div class="productSlider"></div>
-            <div class="productData">
-
+        <a href="#" class="backButton">Назад</a>
+        <div class="singleProduct storeItem">
+            <div class="productSlider">
+                <div class="productSlider">
+                    <div style="background-image: url(img/product-image.jpg)">
+                        <img src="img/product-mask.png" />
+                    </div>
+                    <div style="background-image: url(img/product-image.jpg)">
+                        <img src="img/product-mask.png" />
+                    </div>
+                    <div style="background-image: url(img/product-image.jpg)">
+                        <img src="img/product-mask.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="productData storeContent">
+                <div class="storeTitle">Товар 2</div>
+                <div class="storePrice">102 грн.</div>
+                <div class="storeInfo">
+                    <div class="weight">250 гр.</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+                <div class="storeBottom">
+                    <div class="storeNum">
+                        <span class="minus"></span>
+                        <input type="text" value="1" min="0">
+                        <span class="plus"></span>
+                    </div>
+                    <a href="" class="customBtn blueBtn">в корзину</a>
+                </div>
             </div>
         </div>
     </div>
@@ -95,5 +124,10 @@
         </a>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.productSlider').slick();
+    });
+</script>
 </body>
 </html>
