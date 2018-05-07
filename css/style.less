@@ -627,6 +627,8 @@ strong, b{
       max-height: 60px;
       overflow: hidden;
       margin-bottom:  15px;
+      display: block;
+      text-decoration: none;
     }
     .storePrice{
       font: 30px/30px @robotRegular;
@@ -1129,4 +1131,151 @@ strong, b{
       vertical-align: middle;
     }
   }
+}
+.deliveryWrapper{
+  max-width: 1000px;
+  padding: 0 15px;
+  .deliveryPart{
+    -webkit-box-shadow:  0 0 40px 2px rgba(23, 26, 31, 0.1);
+    -moz-box-shadow:  0 0 40px 2px rgba(23, 26, 31, 0.1);
+    box-shadow:  0 0 40px 2px rgba(23, 26, 31, 0.1);
+    width: 100%;
+    float: left;
+    .deliveryTitle{
+      font: 36px/36px @robotBold;
+      text-transform: uppercase;
+      padding: 70px;
+      width: 100%;
+      float: left;
+    }
+    .deliveryPrice{
+      padding: 0 70px;
+      background: #59bc6e;
+      width: 100%;
+      float: left;
+      table{
+        width: 100%;
+        tr{
+          td{
+            padding: 35px 0;
+            font: 24px @robotMedium;
+            color: #ffffff;
+            &:nth-child(1){
+              width: 20%;
+            }
+            &:nth-child(2){
+              width: 40%;
+            }
+            &:nth-child(3){
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+    .deliveryInfo{
+      padding: 70px;
+      width: 100%;
+      float: left;
+      .deliverySubTitle{
+        font: 24px @robotMedium;
+        margin-bottom: 25px;
+        width: 100%;
+        float: left;
+      }
+    }
+  }
+}
+.mr70{
+  margin-right: 70px;
+}
+.inlineBlock{
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.customCheckbox{
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+  input{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    & + label{
+      cursor: pointer;
+      font: 18px/25px @robotLight;
+      color: #111111;
+      position: relative;
+      padding-left: 45px;
+      &:before{
+        content: '';
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: 0;
+        border: 2px solid #72a2d4;
+        position: absolute;
+      }
+      &:after{
+        content: '';
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: 0;
+        background: url('../img/checked.png') no-repeat center center;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -ms-transition: 0.3s ease all;
+        -o-transition: 0.3s ease all;
+        transition: 0.3s ease all;
+      }
+    }
+    &:checked + label{
+      &:after{
+        opacity: 1;
+      }
+    }
+  }
+}
+.customInput{
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  &.largeInput{
+    max-width: 470px;
+  }
+  &.mediumInput{
+    max-width: 370px;
+  }
+  &.smallInput{
+    max-width: 70px;
+  }
+  input{
+    border: 2px solid #dae3eb;
+    background: #ffffff;
+    width: 100%;
+    height: 38px;
+    float: left;
+    font: 18px @robotMedium;
+    padding: 0 15px;
+  }
+  label{
+    float: left;
+    width: 100%;
+    font: 18px @robotLight;
+    margin-bottom: 5px;
+  }
+}
+.fullWidth{
+  width: 100%;
+}
+.floatLeft{
+  float: left;
 }

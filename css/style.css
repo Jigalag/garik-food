@@ -629,6 +629,8 @@ b {
   max-height: 60px;
   overflow: hidden;
   margin-bottom: 15px;
+  display: block;
+  text-decoration: none;
 }
 .storeItem .storeContent .storePrice {
   font: 30px/30px 'robotoregular';
@@ -1126,4 +1128,147 @@ b {
 .daysItems .dayItem div {
   display: inline-flex;
   vertical-align: middle;
+}
+.deliveryWrapper {
+  max-width: 1000px;
+  padding: 0 15px;
+}
+.deliveryWrapper .deliveryPart {
+  -webkit-box-shadow: 0 0 40px 2px rgba(23, 26, 31, 0.1);
+  -moz-box-shadow: 0 0 40px 2px rgba(23, 26, 31, 0.1);
+  box-shadow: 0 0 40px 2px rgba(23, 26, 31, 0.1);
+  width: 100%;
+  float: left;
+}
+.deliveryWrapper .deliveryPart .deliveryTitle {
+  font: 36px/36px 'robotobold';
+  text-transform: uppercase;
+  padding: 70px;
+  width: 100%;
+  float: left;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice {
+  padding: 0 70px;
+  background: #59bc6e;
+  width: 100%;
+  float: left;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice table {
+  width: 100%;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice table tr td {
+  padding: 35px 0;
+  font: 24px 'robotomedium';
+  color: #ffffff;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice table tr td:nth-child(1) {
+  width: 20%;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice table tr td:nth-child(2) {
+  width: 40%;
+}
+.deliveryWrapper .deliveryPart .deliveryPrice table tr td:nth-child(3) {
+  width: 40%;
+}
+.deliveryWrapper .deliveryPart .deliveryInfo {
+  padding: 70px;
+  width: 100%;
+  float: left;
+}
+.deliveryWrapper .deliveryPart .deliveryInfo .deliverySubTitle {
+  font: 24px 'robotomedium';
+  margin-bottom: 25px;
+  width: 100%;
+  float: left;
+}
+.mr70 {
+  margin-right: 70px;
+}
+.inlineBlock {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.customCheckbox {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.customCheckbox input {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.customCheckbox input + label {
+  cursor: pointer;
+  font: 18px/25px 'robotolight';
+  color: #111111;
+  position: relative;
+  padding-left: 45px;
+}
+.customCheckbox input + label:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  border: 2px solid #72a2d4;
+  position: absolute;
+}
+.customCheckbox input + label:after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background: url('../img/checked.png') no-repeat center center;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.customCheckbox input:checked + label:after {
+  opacity: 1;
+}
+.customInput {
+  float: left;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 30px;
+}
+.customInput.largeInput {
+  max-width: 470px;
+}
+.customInput.mediumInput {
+  max-width: 370px;
+}
+.customInput.smallInput {
+  max-width: 70px;
+}
+.customInput input {
+  border: 2px solid #dae3eb;
+  background: #ffffff;
+  width: 100%;
+  height: 38px;
+  float: left;
+  font: 18px 'robotomedium';
+  padding: 0 15px;
+}
+.customInput label {
+  float: left;
+  width: 100%;
+  font: 18px 'robotolight';
+  margin-bottom: 5px;
+}
+.fullWidth {
+  width: 100%;
+}
+.floatLeft {
+  float: left;
 }
