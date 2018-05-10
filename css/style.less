@@ -216,48 +216,24 @@ strong, b{
       transform: translateX(-50%);
       li{
         display: inline-block;
-        width: 70px;
-        margin:  0 15px;
+        margin:  0 10px;
         position: relative;
         text-align: center;
         button{
-          font: 18px/45px @robotMedium;
+          overflow: hidden;
+          width: 15px;
+          height: 15px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
           color: #ffffff;
           background: transparent;
-          border: none;
-          &:before{
-            content: '0';
-          }
-        }
-        &:before{
-          content: '';
-          width: 100%;
-          height: 2px;
-          left: 0;
-          position: absolute;
-          bottom: 0;
-          background: rgba(255, 255, 255, 0.5);
-        }
-        &:after{
-          content: '';
-          width: 36px;
-          height: 2px;
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-          -moz-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-          -o-transform: translateX(-50%);
-          transform: translateX(-50%);
-          position: absolute;
-          bottom: 0;
-          background: #ffffff;
+          border: 1px solid #ffffff;
+          text-indent: -9999px;
         }
         &.slick-active{
           button{
-            color: #72a2d4;
-          }
-          &:after{
-            background: #72a2d4;
+            background: #ffffff;
           }
         }
       }
@@ -1588,6 +1564,18 @@ strong, b{
   .defaultSection.largeBottomPadding{
     padding-bottom: 80px;
   }
+  .promoSlider {
+    .promoOuterSlide{
+      justify-content: center;
+    }
+    .promoSlide {
+      float: none;
+      display: inline-block;
+    }
+    .slick-arrow{
+      display: none !important;
+    }
+  }
 }
 @media screen and (max-width: 1024px) and (orientation: portrait){
   .promoSlider .promoSlide .promoImage {
@@ -1711,33 +1699,7 @@ strong, b{
         transform: translateX(-50%);
         li{
           width: auto;
-          margin:  0 15px;
-          button{
-            font: 16px/35px @robotMedium;
-          }
-          &:before{
-            content: '';
-            width: 100%;
-            height: 2px;
-            left: 0;
-            position: absolute;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
-          }
-          &:after{
-            content: '';
-            width: 36px;
-            height: 2px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%);
-            position: absolute;
-            bottom: 0;
-            background: #ffffff;
-          }
+          margin:  0 5px;
           &.slick-active{
             button{
               color: #72a2d4;
@@ -1831,8 +1793,14 @@ strong, b{
   .promoSlider {
     float: left;
     width: 100%;
+    .promoOuterSlide{
+      height: auto;
+      text-align: left;
+    }
     .promoSlide {
       padding: 10px;
+      max-width: 100%;
+      float: left;
       .promoImage {
         float: left;
         width: 100%;

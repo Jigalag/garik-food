@@ -227,48 +227,24 @@ b {
 }
 .header .headerSlider .slick-dots li {
   display: inline-block;
-  width: 70px;
-  margin: 0 15px;
+  margin: 0 10px;
   position: relative;
   text-align: center;
 }
 .header .headerSlider .slick-dots li button {
-  font: 18px/45px 'robotomedium';
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   color: #ffffff;
   background: transparent;
-  border: none;
-}
-.header .headerSlider .slick-dots li button:before {
-  content: '0';
-}
-.header .headerSlider .slick-dots li:before {
-  content: '';
-  width: 100%;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
-}
-.header .headerSlider .slick-dots li:after {
-  content: '';
-  width: 36px;
-  height: 2px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 0;
-  background: #ffffff;
+  border: 1px solid #ffffff;
+  text-indent: -9999px;
 }
 .header .headerSlider .slick-dots li.slick-active button {
-  color: #72a2d4;
-}
-.header .headerSlider .slick-dots li.slick-active:after {
-  background: #72a2d4;
+  background: #ffffff;
 }
 .header .headerSlider .slide {
   height: 100%;
@@ -1573,6 +1549,16 @@ b {
   .defaultSection.largeBottomPadding {
     padding-bottom: 80px;
   }
+  .promoSlider .promoOuterSlide {
+    justify-content: center;
+  }
+  .promoSlider .promoSlide {
+    float: none;
+    display: inline-block;
+  }
+  .promoSlider .slick-arrow {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .promoSlider .promoSlide .promoImage {
@@ -1692,33 +1678,7 @@ b {
   }
   .header .headerSlider .slick-dots li {
     width: auto;
-    margin: 0 15px;
-  }
-  .header .headerSlider .slick-dots li button {
-    font: 16px/35px 'robotomedium';
-  }
-  .header .headerSlider .slick-dots li:before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    left: 0;
-    position: absolute;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.5);
-  }
-  .header .headerSlider .slick-dots li:after {
-    content: '';
-    width: 36px;
-    height: 2px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    position: absolute;
-    bottom: 0;
-    background: #ffffff;
+    margin: 0 5px;
   }
   .header .headerSlider .slick-dots li.slick-active button {
     color: #72a2d4;
@@ -1808,8 +1768,14 @@ b {
     float: left;
     width: 100%;
   }
+  .promoSlider .promoOuterSlide {
+    height: auto;
+    text-align: left;
+  }
   .promoSlider .promoSlide {
     padding: 10px;
+    max-width: 100%;
+    float: left;
   }
   .promoSlider .promoSlide .promoImage {
     float: left;
@@ -2034,4 +2000,3 @@ b {
     margin-right: 15px;
   }
 }
-/*# sourceMappingURL=style.css.map */

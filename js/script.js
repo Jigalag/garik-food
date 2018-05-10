@@ -98,7 +98,7 @@ $(document).ready(function() {
                     }
                 },
                 {
-                    breakpoint: 900,
+                    breakpoint: 1000,
                     settings: {
                         centerPadding: '0px',
                     }
